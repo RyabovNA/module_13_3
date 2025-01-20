@@ -7,22 +7,20 @@ bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
 
-@dp.message_handler(text=['Urban', 'ff']) # Обрабатывает сообщения указанные в text
-async def urban_message(message):
-    print("Urban message")
-    await message.answer("Urban message!") # Отправляет ответ пользователю
+# @dp.message_handler(text=['Urban', 'ff']) # Обрабатывает сообщения указанные в text
+# async def urban_message(message):
+#     print("Urban message")
+#     await message.answer("Urban message!") # Отправляет ответ пользователю
 
 
 @dp.message_handler(commands=['start']) # Обрабатывает сообщения после нажатия кнопки START
 async def start_message(message):
-    print("Привет! Я бот помогающий твоему здоровью.")
     await message.answer("Рады вас видеть в нашем боте помощнике!") # Отправляет ответ пользователю
 
 
 @dp.message_handler() # Обрабатывает любые сообщения
 async def all_message(message):
-    print("Введите команду /start, чтобы начать общение.")
-    await message.answer(message.text) # зеркальный отет на сообщение
+    await message.answer("Введите команду /start, чтобы начать общение.")
 
 
 if __name__ == "__main__":
