@@ -16,7 +16,7 @@ async def urban_message(message):
 @dp.message_handler(commands=['start']) # Обрабатывает сообщения после нажатия кнопки START
 async def start_message(message):
     print("Привет! Я бот помогающий твоему здоровью.")
-    await message.answer("Рады вас видеть в нашем боте помошнике!") # Отправляет ответ пользователю
+    await message.answer("Рады вас видеть в нашем боте помощнике!") # Отправляет ответ пользователю
 
 
 @dp.message_handler() # Обрабатывает любые сообщения
